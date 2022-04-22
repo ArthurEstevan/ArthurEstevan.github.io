@@ -12,13 +12,13 @@ Em 1788, Tiradentes envolveu-se no movimento revolucionário da Inconfidência M
 
 Ficou preso durante três anos e foi o único do grupo dos Inconfidentes a ser condenado à forca. Foi enforcado e depois esquartejado, na praça da Lampadosa, no Rio de Janeiro, dia 21 de abril de 1792.
 
-```Dia de Tiradentes
+Dia de Tiradentes
 O Dia de Tiradentes é comemorado 21 de abril no Brasil desde 1965, pela Lei Nº 4.897.
 
 Essa data é feriado nacional e faz homenagem a Tiradentes, considerado um herói nacional, mártir e Patrono da Nação Brasileira.
 
 Com o objetivo de enfatizar a importância dessa figura multifacetada no desenvolvimento da história do Brasil, a data faz referência ao dia de sua morte, quando Tiradentes foi enforcado e esquartejado em 21 de abril de 1792.
-```
+
 
 For more details see [Tiradentes](https://www.todamateria.com.br/tiradentes/).
 
