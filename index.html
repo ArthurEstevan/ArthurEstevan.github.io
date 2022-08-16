@@ -40,16 +40,34 @@
     <nav>
         <div class="container">
             <a href="#">
-                <h3>Developer</h3>
+                <h3 class="developer">Desenvolvedor</h3>
             </a>
+
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Let's Talk</a></li>
+                <li><a class="inicio" href="#" class="active">Início</a></li>
+                <li><a class="sobre" href="#about">Sobre</a></li>
+                <li><a class="habilidades" href="#skills">Habilidade</a></li>
+                <li><a class="servicos" href="#services">Serviços</a></li>
+                <li><a class="portifolio" href="#portfolio">Portfólio</a></li>
+                <li><a class="contato" href="#contact">Contacte-me</a></li>
+
+                <a href="/index.html" class="bandeira-brasil"><img src="/images/brasil.png" id="portugues"></a>
+                <a href="" class="bandeira-americana"><img src="/images/estados-unidos.png" id="ingles"></a>
+
+                <label>
+                    <input class='toggle-checkbox' onclick="modificador()" type='checkbox'></input>
+                    <div class='toggle-slot'>
+                        <div class='sun-icon-wrapper'>
+                            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                        </div>
+                        <div class='toggle-button'></div>
+                        <div class='moon-icon-wrapper'>
+                            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                        </div>
+                    </div>
+                </label>
             </ul>
+
             <button id="menu-btn"><span class="material-symbols-outlined">menu</span></button>
             <button id="close-btn"><span class="material-symbols-outlined">close</span></button>
         </div>
@@ -71,12 +89,13 @@
             </div>
 
             <div class="info">
-                <h1>UI/UX Design & Fullstack Web Developer</h1>
-                <h3>hi, I'm Arthur Estevan</h3>
-                <p>My name's Arthur, I'm nineteen years yold. I'm shoemaker and future developer. I'm tall, thin and
-                    funny. My favorite TV series is "The Officer". That's me...
+                <h1 class="titulo">UI/UX Design e Desenvolvedor Web Fullstack</h1>
+                <h3 class="apresentacao">olá, eu sou Arthur Estevan</h3>
+                <p class="arthur">
+                    Tenho dezenove anos. Sou sapateiro e futuro desenvolvedor. Eu sou alto, magro e
+                    engraçado. Minha série de TV favorita é "The Officer". Este sou eu...
                 </p>
-                <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                <a href="#contact" class="btn btn-primary contato">Contacte-me</a>
             </div>
 
             <div class="profile-area">
@@ -97,22 +116,24 @@
 
     <br>
     <br>
+    <br>
 
     <!-- ======================= START OF ABOUT ======================= -->
 
     <section class="about" id="about">
-        <h1>About</h1>
+        <h1 class="sobre">Sobre</h1>
         <div class="container">
             <div class="image">
                 <img src="/images/about.webp">
             </div>
-            <div class="info">
-                <p>
+            <div class="info" id="info">
+                <p class="biografia-paragrafo01">
                     Meu nome é Arthur Estevan Vargas, nasci no dia 27 de dezembro de 2002, no Hospital Monsenhor José
                     Locks.
                     Sou filho de Ezequiel Augusto Vargas e Alcione Salvador, minha mãe atualmente é esteticista e meu
                     pai maqueteiro.
-                    Quando completei 18 anos como todo jovem estava sem saber para onde correr, pensei em diversas áreas
+                    Quando completei 18 anos igual todos os jovens estava sem saber para onde correr, pensei em diversas
+                    áreas
                     para me especializar.
                     Comecei essa jornada pensando em fazer “Licenciatura em Música” pois são abordados diferentes
                     aspectos da música, desde sua história, domínio de instrumentos e técnicas, chegando até a
@@ -120,11 +141,11 @@
                     seguida o que iremos chamar aqui de “O sonho” veio em forma de Arquitetura e Urbanismo a qual passei
                     curtos 2 meses tendo aula mas devido à falta de alunos na turma tiveram que cancelar o curso, não
                     sou muito de reclamar, entretanto, agradeço até hoje por não ter começado, você já vai saber
-                    porque. Chegando no fim de 2021 percebi que eu ainda não tinha escolhido uma profissão só que
+                    porque. Chegando no fim de 2021 percebi que eu ainda não tinha escolhido uma profissão, só que
                     percebi também que eu queria estar inserido no meio universitário e não poderia desistir de procurar
                     a carreira que se encaixa-se comigo.
                 </p>
-                <p>
+                <p class="biografia-paragrafo02">
                     Então foi nesse exato momento que o vento me levou para Sistema de Informações, um sistema formal,
                     sociotécnico e organizacional usado para coletar, processar, armazenar e disseminar dados
                     informacionais, podendo ser tanto um sistema informacional computadorizado quanto um sistema manual.
@@ -136,7 +157,7 @@
                     que morem em Santa Catarina e estejam cursando ou concluído o ensino médio ou superior.
                 </p>
                 <div class="read-more-content">
-                    <p>
+                    <p class="biografia-paragrafo03">
                         Esse seria um pouco sobre o Arthur mais técnico e voltado apenas para minha carreira...
                         Agora iremos falar sobre o Arthur de verdade, sou um jovem que sonha alto nos seus objetivos,
                         porém, tenho uma base importante na minha vida que é a família, além disso gosto de sempre
@@ -150,18 +171,18 @@
                         toda a palavra de Deus. Brincadeiras à parte estou aqui pois foi onde ganhei minha primeira
                         oportunidade de emprego.
                     </p>
-                    <p>
+                    <p class="biografia-paragrafo04">
                         Agora podemos falar um pouco sobre meus hobbies, no tempo livre desenvolvo sites é um dos
                         hobbies que adquiri com o tempo, além disso também adoro fazer passeio ao ar livre como
                         caminhadas, trilhas e acampamentos, também gosto de ler bons livros atualmente estou lendo “48
                         Leis do Poder” do autor Robert Greene, ótimo livro, recomendo para você que gosta de saber como
                         o poder evolui durante os anos e como conquistar ele.
-                        Thats’me.
+                        Este sou eu.
                     </p>
                 </div>
-                <a class="read-more">Show more</a>
-                <a href="/images/curriculo.pdf" download class="btn btn-primary"><i
-                        class="uil uil-download-alt"></i>Download CV</a>
+                <a class="read-more mostrar" id="mostrandoMais">Mostrar mais</a>
+                <a href="/images/curriculo.pdf" download class="btn btn-primary baixar">Baixar CV <i
+                        class="uil uil-download-alt"></i></a>
             </div>
         </div>
     </section>
@@ -171,7 +192,7 @@
     <!-- ======================= START OF SKILL ======================= -->
 
     <section class="skills" id="skills">
-        <h1>Skills</h1>
+        <h1 class="habilidades">Habilidades</h1>
         <div class="container">
 
             <!-- Start of Skills -->
@@ -364,6 +385,41 @@
             </div>
             <!-- End of Skills -->
 
+            <!-- Start of Skills -->
+            <div class="skill">
+                <div class="head">
+                    <div class="left">
+                        <span class="material-symbols-sharp">settings_suggest</span>
+                        <h4 class="idioma">Idiomas</h4>
+                    </div>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <h5 class="idioma01">Francês</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5 class="idioma02">Inglês</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                </div>
+            </div>
+            <!-- End of Skills -->
+
         </div>
     </section>
 
@@ -374,12 +430,12 @@
     <!-- ======================= START OF SERVICES ======================= -->
 
     <section class="services" id="services">
-        <h1>Services</h1>
+        <h1 class="servicos">Serviços</h1>
         <div class="container">
             <div class="service">
                 <span class="material-symbols-sharp">design_services</span>
                 <h3>UI/UX Design</h3>
-                <p>
+                <p class="design">
                     Design de interface de utilizador ou engenharia de interface de utilizador é o desenvolvimento de
                     computadores, aplicações, máquinas, dispositivos de comunicação móveis, softwares e sítios web com o
                     foco na experiência do utilizadores e interação.
@@ -389,7 +445,7 @@
             <div class="service">
                 <span class="material-symbols-sharp">language</span>
                 <h3>Front-end</h3>
-                <p>
+                <p class="fontend">
                     Meu desenvolvimento front-end da web é o desenvolvimento da interface gráfica do usuário de um site,
                     por meio do uso de HTML, CSS e JavaScript, para que os usuários possam visualizar e interagir com
                     aquele site
@@ -399,7 +455,7 @@
             <div class="service">
                 <span class="material-symbols-sharp">devices</span>
                 <h3>Back-end</h3>
-                <p>
+                <p class="backend">
                     Como desenvolvedor back end trabalho com o lado do servidor de aplicaçãos, sendo o responsável por
                     tudo o
                     que acontece por trás da tela. Sou também responsável por desenvolver os códigos que passarão as
@@ -419,15 +475,15 @@
 
     <section class="recent-work" id="portfolio">
         <div class="container">
-            <h4>My Recent Work</h4>
-            <h1>Here Are Some Of My Most Recent Solo Projects</h1>
+            <h4 class="titulo-work">Meu Trabalho Recente</h4>
+            <h1 class="titulo-projeto">Abaixo alguns dos meus projetos solo mais ecente</h1>
             <div class="projects">
                 <div class="project">
                     <div class="thubmnail">
                         <img src="/images/project-web_site.png">
                     </div>
-                    <h2>Responsive Personal Portfolio Website Using Html, CSS and JavaScript</h2>
-                    <p>
+                    <h2 class="projeto01">Site de portfólio pessoal responsivo usando HTML, CSS e JavaScript</h2>
+                    <p class="sobre-projeto01">
                         Um bom portfólio traz diversas vantagens para o seu dono. Ele é literalmente uma vantagem
                         competitiva que faz a diferença entre conseguir um bom trabalho ou não.
 
@@ -443,8 +499,9 @@
                     <div class="thubmnail">
                         <img src="/images/banco-backend.jpg">
                     </div>
-                    <h2>Entra21 Project Bank Account Using Java Complete Logic in Backend</h2>
-                    <p>
+                    <h2 class="projeto02">Conta bancária do projeto Entra21 usando lógica completa do Java no back-end
+                    </h2>
+                    <p class="sobre-projeto02">
                         Sistema Bancário, onde temos as funcionalidades de um banco como por exemplo: cadastro de conta,
                         login de conta, ações bancárias do dia a dia e também implementação de uma regra de negócio,
                         nesse
@@ -459,8 +516,8 @@
                     <div class="thubmnail">
                         <img src="/images/green_bank.webp">
                     </div>
-                    <h2>Entra21 Project Website Bank Account using Bootstrap</h2>
-                    <p>
+                    <h2 class="projeto03">Conta bancária do site do projeto Entra21 usando Bootstrap</h2>
+                    <p class="sobre-projeto03">
                         Desenvolvimento de um web-site responsivo que foi baseado em um projeto back-end feito em outra
                         oportunidade.
                         Utilizei dos conceitos aprendido no programa Entra21, são eles HTML, CSS e Bootstrap.
@@ -495,7 +552,7 @@
     <!-- ======================= START OF TESTIMONIAL ======================= -->
 
     <section class="testimonials">
-        <h1>Testimonial</h1>
+        <h1 class="testemunho">Testemunho</h1>
         <div class="container swiper">
             <div class="carousel swiper-wrapper">
                 <div class="testimonial swiper-slide">
@@ -564,9 +621,9 @@
                             <span class="material-symbols-sharp">star</span>
                         </div>
                     </div>
-                    <p>Boa, Arthur! Siga nesta mesma sintonia e, com certeza, colherá os frutos disso. Empenho,
+                    <p>
+                        Boa, Arthur! Siga nesta mesma sintonia e, com certeza, colherá os frutos disso. Empenho,
                         dedicação e aprendizado constante deverão ser os seus guias nesta jornada! Estamos juntos nessa!
-                        🤩
                     </p>
                 </div>
                 <!-- END OF TESTIMONIAL -->
@@ -610,17 +667,18 @@
     <section class="contact" id="contact">
         <div class="overlay">
             <div class="container">
-                <h1>Let's Talk</h1>
-                <p>
-                    Olá, tudo bem? Meu nome é Arthur Estevan Vargas e estou à sua disposição. Primeiro, quero entender melhor o
+                <h1 class="contato">Contacte-me</h1>
+                <p class="entrar-contato">
+                    Olá, tudo bem? Meu nome é Arthur Estevan Vargas e estou à sua disposição. Primeiro, quero entender
+                    melhor o
                     motivo do seu contato para que eu possa ajudar você!
                 </p>
                 <form action="https://formspree.io/f/xoqrgyea" method="POST">
-                    <input type="text" name="Name" placeholder="Name" required>
-                    <input type="email" name="Email" placeholder="Email" required>
-                    <input type="text" name="Subject" placeholder="Subject" required>
-                    <textarea name="Message" placeholder="Message" required></textarea>
-                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <input id="nome" type="text" name="Name" placeholder="Nome" required>
+                    <input id="email" type="email" name="Email" placeholder="Email" required>
+                    <input id="assunto" type="text" name="Subject" placeholder="Assunto" required>
+                    <textarea id="mensagem" name="Message" placeholder="Mensagem" required></textarea>
+                    <input type="submit" id="enviardados" value="Enviar" class="btn btn-primary">
                 </form>
             </div>
         </div>
@@ -628,18 +686,19 @@
 
     <!-- ======================= END OF CONTACT ======================= -->
 
+    <!-- ======================= START OF FOOTER ======================= -->
     <footer>
         <div class="container">
             <a href="#">
-                <h3>Developer</h3>
+                <h3 class="developer">Desenvolvedor</h3>
             </a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Let's Talk</a></li>
+                <li><a class="inicio" href="#">Início</a></li>
+                <li><a class="sobre" href="#about">Sobre</a></li>
+                <li><a class="habilidades" href="#skills">Habilidade</a></li>
+                <li><a class="servicos" href="#services">Serviços</a></li>
+                <li><a class="portifolio" href="#portfolio">Portfólio</a></li>
+                <li><a class="contato" href="#contact">Contacte-me</a></li>
             </ul>
             <div class="socials">
                 <a href="https://www.instagram.com/arthur.estevan/" target="_blank"><i
@@ -654,10 +713,19 @@
             Copyright &copy; ArthurEstevan GitHub
         </div>
     </footer>
+    <!-- ======================= END OF FOOTER ======================= -->
 
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"> </script>
+
+    <!-- Jquery -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
+    <!-- Java main -->
     <script src="./main.js"></script>
+
 
 </body>
 

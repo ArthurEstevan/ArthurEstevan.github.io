@@ -6,6 +6,8 @@
     --color-black: #141415;
     --color-primary: #f24e1e;
     --color-primary-light: hsl(14, 89%, 53%, 12%);
+    --color-primary-dark: rgba(222, 215, 215, 0.018);
+    --color-primary-dark-hover: rgba(228, 216, 216, 0.12);
     --color-success: #29f5a6;
     --color-warning: #ffce31;
 
@@ -25,12 +27,14 @@
 
 ::-webkit-scrollbar {
     width: 10px;
-    background: var(--color-primary-light);
+    background: var(--color-white);
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--color-primary);
 }
+
+
 
 html {
     font-size: 15px;
@@ -44,6 +48,16 @@ body {
     max-width: 100vw;
 }
 
+/* ========== BODY DARK MODE ========== */
+.dark {
+    background: var(--color-black);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark);
+    max-width: 100vw;
+}
+
+/* ========== BODY DARK MODE ========== */
+
 h1,
 h2,
 h3,
@@ -52,6 +66,22 @@ h5 {
     color: var(--color-black);
     line-height: 1.2;
 }
+
+/* ========== LETTER DARK MODE ========== */
+.dark h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-white);
+    line-height: 1.2;
+}
+
+.dark p {
+    color: var(--color-white);
+}
+
+/* ========== LETTER DARK MODE ========== */
 
 h1 {
     font-size: 3.8rem;
@@ -117,6 +147,28 @@ img {
     color: var(--color-white);
 }
 
+/* ========== BTN DARK MODE ========== */
+.dark .btn {
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    background: var(--color-black);
+    display: inline-block;
+    margin: 2rem 0;
+    transition: var(--transition);
+}
+
+.dark .btn:hover {
+    box-shadow: 0 2rem 2rem var(--color-primary-dark);
+}
+
+.dark .btn-primary {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* ========== BTN DARK MODE ========== */
+
 /* ========================== NAVBAR ========================== */
 
 nav {
@@ -178,6 +230,51 @@ nav .container ul li a.active {
     color: var(--color-white);
 }
 
+/* ========== NAV DARK MODE ========== */
+.dark nav {
+    width: 100%;
+    height: 5rem;
+    background: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid var(--color-dark);
+}
+
+.dark nav.show-box-shadow {
+    box-shadow: 0 0.6rem 1rem var(--color-primary-dark);
+    border: none;
+}
+
+.dark nav h3 {
+    color: var(--color-white);
+}
+
+.dark nav .container ul li a {
+    height: 100%;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    position: relative;
+    transition: var(--transition);
+}
+
+.dark nav .container ul li a:hover {
+    color: var(--color-dark);
+}
+
+.dark nav .container ul li a.active {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* ========== NAV DARK MODE ========== */
+
 /* ======================= LANDING ======================= */
 
 section.landing {
@@ -186,6 +283,10 @@ section.landing {
     position: relative;
     top: 5rem;
     padding-bottom: 14rem;
+}
+
+section.landing h3 {
+    color: var(--color-black);
 }
 
 section.landing .container {
@@ -296,6 +397,42 @@ section.landing .profile-area .inner-circle {
     overflow: hidden
 }
 
+/* ========== SECTION DARK MODE ========== */
+.dark section.landing .socials a:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.dark section.landing .profile-area .outer-circle {
+    width: 26rem;
+    height: 26rem;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    position: relative;
+    animation: move 30s linear infinite;
+}
+
+.dark section.landing .profile-area .outer-circle span {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+.dark section.landing h3 {
+    color: var(--color-white);
+}
+
+/* ========== SECTION DARK MODE ========== */
+
+
 /* ======================= ABOUT ======================= */
 
 section.about {
@@ -332,6 +469,13 @@ section.about .container .read-more:hover {
     text-decoration: underline;
 }
 
+/* ========== ABOUT DARK MODE ========== */
+.dark section.about {
+    background: var(--color-black);
+}
+
+/* ========== ABOUT DARK MODE ========== */
+
 /* ======================= SKILL ======================= */
 
 section.skills .container {
@@ -366,6 +510,10 @@ section.skills .skill .items {
     display: none;
 }
 
+section.skills .skill .items h5 {
+    color: var(--color-black);
+}
+
 /* for javascript show/hide items*/
 section.skills .container .skill .items.show-items {
     display: block;
@@ -377,15 +525,10 @@ section.skills .skill .item {
     align-items: start;
     gap: 1rem;
     padding: 1.6rem;
-    background: var(--color-light);
     margin-bottom: 0.3rem;
     transition: var(--transition);
 }
 
-
-section.skills .skill .item:hover {
-    background: var(--color-white);
-}
 
 section.skills .skill .progress-area {
     width: 100%;
@@ -422,10 +565,63 @@ section.skills .item:nth-child(5) .progress-bar .progress {
     width: 45%;
 }
 
+/* ========== SKILL DARK MODE ========== */
+.dark section.skills .skill .items h5 {
+    color: var(--color-white);
+}
+
+.dark section.skills .skill .head {
+    background: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-black);
+    padding: 1.6rem;
+    cursor: pointer;
+}
+
+.dark section.skills .skill .head h4 {
+    color: var(--color-black);
+}
+
+.dark section.skills .item .progress-bar {
+    width: 100%;
+    height: 1rem;
+    background: var(--color-primary-dark-hover);
+}
+
+.dark section.skills .item .progress-bar .progress {
+    height: 100%;
+    width: 20%;
+    background: var(--color-white);
+}
+
+.dark section.skills .item:nth-child(2) .progress-bar .progress {
+    width: 50%;
+}
+
+.dark section.skills .item:nth-child(3) .progress-bar .progress {
+    width: 50%;
+}
+
+.dark section.skills .item:nth-child(4) .progress-bar .progress {
+    width: 30%;
+}
+
+.dark section.skills .item:nth-child(5) .progress-bar .progress {
+    width: 45%;
+}
+
+/* ========== SKILL DARK MODE ========== */
+
 /* ======================= SERVICES ======================= */
 
 section.services {
     background: var(--color-light);
+}
+
+section.services h3 {
+    color: var(--color-black);
 }
 
 section.services .container {
@@ -469,12 +665,46 @@ section.services .container .service:nth-child(3) span {
     background: var(--color-success);
 }
 
+/* ========== SERVICES DARK MODE ========== */
+
+.dark section.services {
+    background: var(--color-black);
+}
+
+.dark section.services .container .service {
+    background: var(--color-black);
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: default;
+    transition: var(--transition);
+}
+
+.dark section.services .container .service:hover {
+    box-shadow: 0 2rem 2rem var(--color-primary-dark-hover);
+}
+
+.dark section.services h3 {
+    color: var(--color-white);
+}
+/* ========== SERVICES DARK MODE ========== */
+
 /* ======================= RECENT WORK ======================= */
 
 section.recent-work h1 {
     text-align: left;
     margin: 3rem 0 1rem;
     width: 65%;
+}
+
+section.recent-work h2 {
+    color: var(--color-black);
+}
+
+section.recent-work h4 {
+    color: var(--color-black);
 }
 
 section.recent-work .projects {
@@ -502,6 +732,19 @@ section.recent-work .projects .project .action a:hover {
     text-decoration: underline;
 }
 
+/* ========== TESTEMONIAL SKILL DARK MODE ========== */
+
+.dark section.recent-work h2 {
+    color: var(--color-white);
+}
+
+.dark section.recent-work h4 {
+    color: var(--color-white);
+}
+
+
+/* ========== TESTEMONIAL SKILL DARK MODE ========== */
+
 /* ======================= TESTEMONIAL ======================= */
 
 section.testimonials {
@@ -526,6 +769,7 @@ section.testimonials .testimonial {
     font-size: 0.9rem;
     margin-bottom: 2rem;
     cursor: pointer;
+    box-shadow: 0 0 1rem var(--color-primary-light);
 }
 
 section.testimonials .testimonial .head {
@@ -553,6 +797,30 @@ section.testimonials .testimonial .head .stars {
 section.testimonials .testimonial .head .stars span {
     font-size: 1.2rem;
 }
+
+/* ========== TESTEMONIAL DARK MODE ========== */
+
+.dark section.testimonials {
+    background: var(--color-black);
+}
+
+.dark section.testimonials .testimonial {
+    background: var(--color-black);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.dark section.testimonials .testimonial .head .stars {
+    color: var(--color-white);
+}
+
+/* ========== TESTEMONIAL SKILL DARK MODE ========== */
 
 /* ======================= CONTACT ======================= */
 
@@ -619,16 +887,89 @@ section.contact form textarea::placeholder {
 section.contact form .btn {
     width: 14rem;
     border: none;
+    background: var(--color-primary);
+    color: var(--color-white);
+    margin: 2rem auto 0;
+}
+
+section.contact form .btn:hover {
+    background: var(--color-white);
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+/* ========== CONTACT DARK MODE ========== */
+
+.dark section.contact .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10rem 0 7rem;
+}
+
+.dark section.contact .container {
+    width: 40%;
+}
+
+.dark section.contact .container h1 {
+    margin: 0;
+    color: var(--color-white);
+}
+
+.dark section.contact .container p {
+    text-align: center;
+    color: var(--color-white);
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.dark section.contact form {
+    margin-top: 3rem;
+}
+
+.dark section.contact form input,
+section.contact form textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1.6rem;
+    border: 1px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+    transition: var(--transition);
+}
+
+.dark section.contact form textarea {
+    height: 10rem;
+}
+
+.dark section.contact form input:focus,
+section.contact form textarea:focus {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.dark section.contact form input::placeholder,
+section.contact form textarea::placeholder {
+    color: var(--color-white);
+}
+
+.dark section.contact form .btn {
+    width: 14rem;
+    border: none;
     background: var(--color-white);
     color: var(--color-black);
     margin: 2rem auto 0;
 }
 
-section.contact form .btn:hover {
-    background: var(--color-primary);
+.dark section.contact form .btn:hover {
+    background: var(--color-black);
     cursor: pointer;
     color: var(--color-white);
 }
+
+/* ========== CONTACT DARK MODE ========== */
+
 
 /* ======================= FOOTER ======================= */
 
@@ -640,6 +981,10 @@ footer .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+footer .container h3 {
+    color: var(--color-black);
 }
 
 footer .container ul {
@@ -688,6 +1033,33 @@ footer .copyright {
     padding: 2rem 0;
     font-size: 0.8rem;
 }
+
+/* ========== FOOTER DARK MODE ========== */
+
+.dark footer .container .socials a:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.dark footer .container ul a:hover {
+    color: var(--color-white);
+}
+
+.dark footer .container h3 {
+    color: var(--color-white);
+}
+
+.dark footer .copyright {
+    background: var(--color-white);
+    color: var(--color-black);
+    text-align: center;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    font-size: 0.8rem;
+}
+
+
+/* ========== FOOTER DARK MODE ========== */
 
 /* ======================= MEDIA QUERIES (PHONES) ======================= */
 
@@ -825,17 +1197,17 @@ footer .copyright {
         left: calc(50% - 1.5rem);
         top: -1.5rem;
     }
-    
+
     section.landing .profile-area .outer-circle span:nth-child(2) {
         right: -1.5rem;
         top: calc(50% - 1.5rem);
     }
-    
+
     section.landing .profile-area .outer-circle span:nth-child(3) {
         left: -1.5rem;
         top: calc(50% - 1.5rem);
     }
-    
+
     section.landing .profile-area .outer-circle span:nth-child(4) {
         bottom: -1.5rem;
         left: calc(50% - 1.5rem);
@@ -894,8 +1266,8 @@ footer .copyright {
         margin: 0.5rem auto 0;
     }
 
-    /* ======================= CONTACT ======================= */ 
-    
+    /* ======================= CONTACT ======================= */
+
     footer .container {
         flex-direction: column;
         gap: 3rem;
@@ -906,4 +1278,115 @@ footer .copyright {
         text-align: center;
         gap: 1.4rem;
     }
+}
+
+/* ======================= CONTACT ======================= */
+
+/* ======================= BUTTON ======================= */
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    margin-top: 1.7rem;
+    margin-right: -15rem;
+    margin-left: 5rem;
+    position: relative;
+    height: 1.5em;
+    width: 5em;
+    border: 1px solid var(--color-black);
+    border-radius: 10em;
+    background-color: none;
+    transition: background-color 300ms;
+}
+
+.dark .toggle-slot {
+    margin-top: 1.7rem;
+    margin-right: -15rem;
+    margin-left: 5rem;
+    position: relative;
+    height: 1.5em;
+    width: 5em;
+    border: 1px solid var(--color-white);
+    border-radius: 10em;
+    transition: background-color 300ms;
+}
+
+.toggle-checkbox:checked~.toggle-slot {
+    background-color: none;  
+}
+
+.toggle-button {
+    transform: translate(3.5em, 0.17em);
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    transition: background-color 2s, border-color 2s, transform 2s cubic-bezier(.5, 2, .30, .51);
+}
+
+.toggle-checkbox:checked~.toggle-slot .toggle-button {
+    background-color: white;
+    transform: translate( 0.35em, 0.17em);
+}
+
+.sun-icon {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    color: var(--color-primary);
+}
+
+.sun-icon-wrapper {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    opacity: 1;
+    transform: translate(0.35em, 0.17em) rotate(15deg);
+}
+
+.toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+}
+
+.moon-icon {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    color: white;
+}
+
+.moon-icon-wrapper {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    opacity: 0;
+    transform: translate(0.2em, 2em) rotate(0deg);
+}
+
+.toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(3.5em, 0.17em);
+}
+/* ======================= BUTTON ======================= */
+
+/* ======================= BANDEIRA ======================= */
+
+.bandeira-brasil {
+    margin-top: 1.3rem;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    display: inline;
+}
+
+.bandeira-americana {
+    margin-top: 1.3rem;
+    margin-right: -4rem;
+    display: inline;
 }
