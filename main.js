@@ -136,8 +136,8 @@ let sobre_projeto01 = "A good portfolio brings several advantages to its owner. 
 let projeto02 = "Entra21 Project Bank Account Using Java Complete Logic in Backend"
 let sobre_projeto02 = "Banking System, where we have the features of a bank such as: account registration, account login, day-to-day banking actions and also implementation of a business rule, in this case I used `investments` in the project to highlight the rule of business."
 
-let projeto03 = "Entra21 Project Website Bank Account using Bootstrap"
-let sobre_projeto03 = "Development of a responsive web-site that was based on a back-end project done on another occasion. I used the concepts learned in the Entra21 program, they are HTML, CSS and Bootstrap."
+let projeto03 = "Project website \"Enta21 JavaScript\" using general knowledge"
+let sobre_projeto03 = "Coming to another stage of our course, I was asked to deliver a simple project made in HTML, using knowledge such as JavaScript, JQuery and API. I created a mini site where you can browse through these three subjects and learn more about them. Exercises proposed in the classroom were also carried out within the topics. Thus structuring a complete site with informative content and exercises for practice."
 
 // LET TESTEMONIAL
 let testemunho = "Testimonial"
@@ -145,6 +145,14 @@ let testemunho = "Testimonial"
 // LET LET'S CONTACT
 let entrar_contato = "Good, Arthur! Follow this same tune and, for sure, you will reap the fruits of it. Effort, dedication and constant learning should be your guides on this journey! We're in this together!"
 let enviardados = "Submit"
+
+
+$("#portugues").on("click", (event) => {
+    
+    event.preventDefault();
+    location.reload();
+})
+
 
 $("#ingles").on("click", (event) => {
 
