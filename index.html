@@ -1,25 +1,729 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoi ( ͡~ ͜ʖ ͡°)</title>
+    <title>Responsive Personal Portfolio Website Using Html, CSS and JavaScript</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/gamer.png" type="image/x-icon">
 
+    <!-- material icon cdn -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- font monteserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- icons cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styled.css">
+
 </head>
 
 <body>
-    <div class="container">
-        <h1>Quer namorar comigo?</h1>
-        <a id="sim" href="https://www.youtube.com/watch?v=vmBoMQk2JPE">Sim</a>
-        <button id="nao" on class="button">Não</button>
-    </div>
-    <script src="script.js"></script>
+
+    <!-- ======================= START OF NAVBAR ======================= -->
+
+    <nav>
+        <div class="container">
+            <a href="#">
+                <h3 class="developer">Desenvolvedor</h3>
+            </a>
+
+            <ul>
+                <li><a class="inicio" href="#" class="active">Início</a></li>
+                <li><a class="sobre" href="#about">Sobre</a></li>
+                <li><a class="habilidades" href="#skills">Habilidade</a></li>
+                <li><a class="servicos" href="#services">Serviços</a></li>
+                <li><a class="portifolio" href="#portfolio">Portfólio</a></li>
+                <li><a class="contato" href="#contact">Contacte-me</a></li>
+
+                <a href="/index.html" class="bandeira-brasil"><img class="bandeira-brasil-mobile" src="/images/brasil.png" id="portugues"></a>
+                <a href="" class="bandeira-americana"><img class="bandeira-americana-mobile" src="/images/estados-unidos.png" id="ingles"></a>
+
+                <label>
+                    <input class='toggle-checkbox' onclick="modificador()" type='checkbox'></input>
+                    <div class='toggle-slot'>
+                        <div class='sun-icon-wrapper'>
+                            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                        </div>
+                        <div class='toggle-button'></div>
+                        <div class='moon-icon-wrapper'>
+                            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                        </div>
+                    </div>
+                </label>
+            </ul>
+
+            <button id="menu-btn"><span class="material-symbols-outlined">menu</span></button>
+            <button id="close-btn"><span class="material-symbols-outlined">close</span></button>
+        </div>
+    </nav>
+
+    <!-- ======================= END OF NAVBAR ======================= -->
+
+    <!-- ======================= START OF LANDING ======================= -->
+
+    <section class="landing">
+        <div class="container">
+
+            <div class="socials">
+                <a href="https://www.instagram.com/arthur.estevan/" target="_blank"><i
+                        class="uil uil-instagram"></i></a>
+                <a href="https://github.com/ArthurEstevan" target="_blank"><i class="uil uil-github-alt"></i></a>
+                <a href="https://www.linkedin.com/in/arthur-estevan-vargas-189208223/" target="_blank"><i
+                        class="uil uil-linkedin-alt"></i></a>
+            </div>
+
+            <div class="info">
+                <h1 class="titulo">UI/UX Design e Desenvolvedor Web Fullstack</h1>
+                <h3 class="apresentacao">olá, eu sou Arthur Estevan</h3>
+                <p class="arthur">
+                    Tenho dezenove anos. Sou sapateiro e futuro desenvolvedor. Eu sou alto, magro e
+                    engraçado. Minha série de TV favorita é "The Officer". Este sou eu...
+                </p>
+                <a href="#contact" class="btn btn-primary contato">Contacte-me</a>
+            </div>
+
+            <div class="profile-area">
+                <div class="outer-circle">
+                    <span class="material-symbols-outlined">design_services</span>
+                    <span class="material-symbols-outlined">dns</span>
+                    <span class="material-symbols-outlined">code</span>
+                    <span class="material-symbols-outlined">video_library</span>
+                </div>
+                <div class="inner-circle">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= END OF LANDING ======================= -->
+
+    <br>
+    <br>
+    <br>
+
+    <!-- ======================= START OF ABOUT ======================= -->
+
+    <section class="about" id="about">
+        <h1 class="sobre">Sobre</h1>
+        <div class="container">
+            <div class="image">
+                <img src="/images/about.webp">
+            </div>
+            <div class="info" id="info">
+                <p class="biografia-paragrafo01">
+                    Meu nome é Arthur Estevan Vargas, nasci no dia 27 de dezembro de 2002, no Hospital Monsenhor José
+                    Locks.
+                    Sou filho de Ezequiel Augusto Vargas e Alcione Salvador, minha mãe atualmente é esteticista e meu
+                    pai maqueteiro.
+                    Quando completei 18 anos igual todos os jovens estava sem saber para onde correr, pensei em diversas
+                    áreas
+                    para me especializar.
+                    Comecei essa jornada pensando em fazer “Licenciatura em Música” pois são abordados diferentes
+                    aspectos da música, desde sua história, domínio de instrumentos e técnicas, chegando até a
+                    composição e regência, algo que sempre me chamou atenção, porém, logo vi que não era pra mim. Em
+                    seguida o que iremos chamar aqui de “O sonho” veio em forma de Arquitetura e Urbanismo a qual passei
+                    curtos 2 meses tendo aula mas devido à falta de alunos na turma tiveram que cancelar o curso, não
+                    sou muito de reclamar, entretanto, agradeço até hoje por não ter começado, você já vai saber
+                    porque. Chegando no fim de 2021 percebi que eu ainda não tinha escolhido uma profissão, só que
+                    percebi também que eu queria estar inserido no meio universitário e não poderia desistir de procurar
+                    a carreira que se encaixa-se comigo.
+                </p>
+                <p class="biografia-paragrafo02">
+                    Então foi nesse exato momento que o vento me levou para Sistema de Informações, um sistema formal,
+                    sociotécnico e organizacional usado para coletar, processar, armazenar e disseminar dados
+                    informacionais, podendo ser tanto um sistema informacional computadorizado quanto um sistema manual.
+                    Então através de indicações dei start na minha carreira de programador ou pros mais chegados
+                    developer a partir do programa Entra21.
+                    Desenvolvido pelo BLUSOFT, entidade sem fins lucrativos que visa promover Blumenau como Polo
+                    Tecnológico, o Entra21 é um programa de formação e empregabilidade com o objetivo de suprir o setor
+                    tecnológico com mão de obra especializada. Ele é destinado para jovens a partir de 16 anos e adultos
+                    que morem em Santa Catarina e estejam cursando ou concluído o ensino médio ou superior.
+                </p>
+                <div class="read-more-content">
+                    <p class="biografia-paragrafo03">
+                        Esse seria um pouco sobre o Arthur mais técnico e voltado apenas para minha carreira...
+                        Agora iremos falar sobre o Arthur de verdade, sou um jovem que sonha alto nos seus objetivos,
+                        porém, tenho uma base importante na minha vida que é a família, além disso gosto de sempre
+                        lembrar que temos um ponto de partida que nunca podemos esquecer.
+                        Qual seria meu ponto de partida?
+                        - Meu ponto de partida é onde trabalho atualmente Suzana Santos Calçados.
+                        Aqui pude desenvolver ainda mais minhas noções de como é estar inserido no meio trabalhista,
+                        também escolhi o calçado porque minha cidade tem forte influência no polo calçadista.
+                        Pera eu sei você deve estar pensando o que um desenvolvedor está fazendo trabalhando com
+                        calçado. E Jesus lhe respondeu, dizendo: Está escrito que nem só de pão viverá o homem, mas de
+                        toda a palavra de Deus. Brincadeiras à parte estou aqui pois foi onde ganhei minha primeira
+                        oportunidade de emprego.
+                    </p>
+                    <p class="biografia-paragrafo04">
+                        Agora podemos falar um pouco sobre meus hobbies, no tempo livre desenvolvo sites é um dos
+                        hobbies que adquiri com o tempo, além disso também adoro fazer passeio ao ar livre como
+                        caminhadas, trilhas e acampamentos, também gosto de ler bons livros atualmente estou lendo “48
+                        Leis do Poder” do autor Robert Greene, ótimo livro, recomendo para você que gosta de saber como
+                        o poder evolui durante os anos e como conquistar ele.
+                        Este sou eu.
+                    </p>
+                </div>
+                <a class="read-more mostrar" id="mostrandoMais">Mostrar mais</a>
+                <a href="/images/curriculo.pdf" download class="btn btn-primary baixar">Baixar CV <i
+                        class="uil uil-download-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= END OF ABOUT ======================= -->
+
+    <!-- ======================= START OF SKILL ======================= -->
+
+    <section class="skills" id="skills">
+        <h1 class="habilidades">Habilidades</h1>
+        <div class="container">
+
+            <!-- Start of Skills -->
+            <div class="skill">
+                <div class="head">
+                    <div class="left">
+                        <span class="material-symbols-sharp">design_services</span>
+                        <h4>UI/UX Design</h4>
+                    </div>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <h5>Figma</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>Adobe Photoshop</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>CorelDRAW</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>60%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                </div>
+            </div>
+            <!-- End of Skills -->
+
+            <!-- Start of Skills -->
+            <div class="skill">
+                <div class="head">
+                    <div class="left">
+                        <span class="material-symbols-sharp">code</span>
+                        <h4>Frontend Development</h4>
+                    </div>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <h5>Bootstrap</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>CSS</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>HTML</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>JavaScript</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>30%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                </div>
+            </div>
+            <!-- End of Skills -->
+
+            <!-- Start of Skills -->
+            <div class="skill">
+                <div class="head">
+                    <div class="left">
+                        <span class="material-symbols-outlined">dns</span>
+                        <h4>backend Development</h4>
+                    </div>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <h5>NetBeans</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>IntelliJ IDEA</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>Eclipse IDEA</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>Visual Studio Code</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>30%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5>SQLiteStudio</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>45%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                </div>
+            </div>
+            <!-- End of Skills -->
+
+            <!-- Start of Skills -->
+            <div class="skill">
+                <div class="head">
+                    <div class="left">
+                        <span class="material-symbols-sharp">settings_suggest</span>
+                        <h4>CMS</h4>
+                    </div>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <h5>Wordpress</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                </div>
+            </div>
+            <!-- End of Skills -->
+
+            <!-- Start of Skills -->
+            <div class="skill">
+                <div class="head">
+                    <div class="left">
+                        <span class="material-symbols-sharp">settings_suggest</span>
+                        <h4 class="idioma">Idiomas</h4>
+                    </div>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <h5 class="idioma01">Francês</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                    <div class="item">
+                        <h5 class="idioma02">Inglês</h5>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                    <!-- END OF ITEM -->
+                </div>
+            </div>
+            <!-- End of Skills -->
+
+        </div>
+    </section>
+
+    <!-- ======================= END OF SKILL ======================= -->
+
+    <br><br><br><br>
+
+    <!-- ======================= START OF SERVICES ======================= -->
+
+    <section class="services" id="services">
+        <h1 class="servicos">Serviços</h1>
+        <div class="container">
+            <div class="service">
+                <span class="material-symbols-sharp">design_services</span>
+                <h3>UI/UX Design</h3>
+                <p class="design">
+                    Design de interface de utilizador ou engenharia de interface de utilizador é o desenvolvimento de
+                    computadores, aplicações, máquinas, dispositivos de comunicação móveis, softwares e sítios web com o
+                    foco na experiência do utilizadores e interação.
+                </p>
+            </div>
+            <!-- END OF SERVICE -->
+            <div class="service">
+                <span class="material-symbols-sharp">language</span>
+                <h3>Front-end</h3>
+                <p class="fontend">
+                    Meu desenvolvimento front-end da web é o desenvolvimento da interface gráfica do usuário de um site,
+                    por meio do uso de HTML, CSS e JavaScript, para que os usuários possam visualizar e interagir com
+                    aquele site
+                </p>
+            </div>
+            <!-- END OF SERVICE -->
+            <div class="service">
+                <span class="material-symbols-sharp">devices</span>
+                <h3>Back-end</h3>
+                <p class="backend">
+                    Como desenvolvedor back end trabalho com o lado do servidor de aplicaçãos, sendo o responsável por
+                    tudo o
+                    que acontece por trás da tela. Sou também responsável por desenvolver os códigos que passarão as
+                    instruções para a aplicação, para que os usuários possam acessar a interface e cumprir as
+                    solicitações desejadas.
+                </p>
+            </div>
+            <!-- END OF SERVICE -->
+        </div>
+    </section>
+
+    <!-- ======================= END OF SERVICES ======================= -->
+
+    <br><br><br><br>
+
+    <!-- ======================= START OF PORTFOLIO ======================= -->
+
+    <section class="recent-work" id="portfolio">
+        <div class="container">
+            <h4 class="titulo-work">Meus Trabalhos Recente</h4>
+            <h1 class="titulo-projeto">Abaixo alguns dos meus projetos solo mais recente</h1>
+            <div class="projects">
+                <div class="project">
+                    <div class="thubmnail">
+                        <img src="/images/portifolio.gif">
+                    </div>
+                    <h2 class="projeto01">Site de portfólio pessoal responsivo usando HTML, CSS e JavaScript</h2>
+                    <p class="sobre-projeto01">
+                        Um bom portfólio traz diversas vantagens para o seu dono. Ele é literalmente uma vantagem
+                        competitiva que faz a diferença entre conseguir um bom trabalho ou não.
+
+                        De nada adianta possuir um ótimo currículo e um excelente serviço se a “sua vitrine” está mal
+                        feita.
+                    </p>
+                    <div class="action">
+                        <a href="https://github.com/ArthurEstevan/My-Portfolio" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- END OF PROJECT -->
+                <div class="project">
+                    <div class="thubmnail">
+                        <img src="/images/conta-bancaria.gif">
+                    </div>
+                    <h2 class="projeto02">Projeto "Entra21 Conta bancária" usando lógica completa do Java no back-end</h2>
+                    <p class="sobre-projeto02">
+                        Sistema Bancário, onde temos as funcionalidades de um banco como por exemplo: cadastro de conta,
+                        login de conta, ações bancárias do dia a dia e também implementação de uma regra de negócio,
+                        nesse
+                        caso utilizei "investimentos" no projeto para resaltar a regra de negócio.
+                    </p>
+                    <div class="action">
+                        <a href="https://github.com/ArthurEstevan/redesenvolvimento-conta-bancaria-v2.0" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- END OF PROJECT -->
+                <div class="project">
+                    <div class="thubmnail">
+                        <img src="/images/java-script-project.gif">
+                    </div>
+                    <h2 class="projeto03">Site do projeto "Entra21 JavaScript" usando conhecimentos gerais</h2>
+                    <p class="sobre-projeto03">
+                        Chegando a mais uma etapa do nosso curso, me pediram para entregar um projeto simples feito em HTML, utilizando conhecimentos como JavaScript, JQuery e API. Criei um mini site onde você pode navegar por esses três assuntos e aprender mais sobre eles. Dentro dos tópicos também foram realizados exercícios propostos em sala de aula. Estruturando assim um site completo com conteúdo informativo e exercícios para prática.
+                    </p>
+                    <div class="action">
+                        <a href="https://github.com/ArthurEstevan/Entra21_Project_JavaScript_2022" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- END OF PROJECT -->
+                <!-- <div class="project">
+                    <div class="thubmnail">
+                        <img src="/images/green_bank.webp">
+                    </div>
+                    <h2>Entra21 Project Website Bank Account using Bootstrap</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptas et quis nobis
+                        culpa,
+                        iure
+                        aut maxime voluptatibus beatae tempora. Provident temporibus corporis praesentium
+                        voluptatibus
+                        placeat nobis nostrum quo enim.
+                    </p>
+                    <div class="action">
+                        <a href="https://github.com" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                END OF PROJECT -->
+            </div>
+    </section>
+
+    <!-- ======================= END OF PORTFOLIO ======================= -->
+
+    <!-- ======================= START OF TESTIMONIAL ======================= -->
+
+    <section class="testimonials">
+        <h1 class="testemunho">Testemunhos</h1>
+        <div class="container swiper">
+            <div class="carousel swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="profile-area">
+                            <div class="avatar">
+                                <img src="images/oliota.jpg">
+                            </div>
+                            <div class="info">
+                                <h4>Rubem Oliota</h4>
+                                <small>Analista | Desenvolvedor | Professor | Artesão</small>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                        </div>
+                    </div>
+                    <p>O único lugar onde o (S)ucesso vem antes do (T)rabalho é no dicionário.
+                        Continue sempre entregando o seu melhor e garantindo o que se espera da sua atuação que o
+                        reconhecimento será consequência.
+                    </p>
+                </div>
+                <!-- END OF TESTIMONIAL -->
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="profile-area">
+                            <div class="avatar">
+                                <img src="images/Proway.jpg">
+                            </div>
+                            <div class="info">
+                                <h4>Proway</h4>
+                                <small>Cursos em Tecnologia da Informação</small>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                        </div>
+                    </div>
+                    <p>É isso aí Arthur! Gratidão é uma dádiva, e esforço é com a gente Sucesso!</p>
+                </div>
+                <!-- END OF TESTIMONIAL -->
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="profile-area">
+                            <div class="avatar">
+                                <img src="images/Joao-Proway.jpg">
+                            </div>
+                            <div class="info">
+                                <h4>João Silva</h4>
+                                <small>Comunicação | Freelancer | Marketing | Design</small>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                        </div>
+                    </div>
+                    <p>
+                        Boa, Arthur! Siga nesta mesma sintonia e, com certeza, colherá os frutos disso. Empenho,
+                        dedicação e aprendizado constante deverão ser os seus guias nesta jornada! Estamos juntos nessa!
+                    </p>
+                </div>
+                <!-- END OF TESTIMONIAL -->
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="profile-area">
+                            <div class="avatar">
+                                <img src="images/Julia-Proway.jpg">
+                            </div>
+                            <div class="info">
+                                <h4>Júlia Amado</h4>
+                                <small>Estag de Onboarding na Ambev Tech</small>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                            <span class="material-symbols-sharp">star</span>
+                        </div>
+                    </div>
+                    <p>Que legal, Arthur! O trajeto é cheio de aprendizados e desafios, mas o destino é ainda mais
+                        incrível, vale todo o esforço. Continua nessa persistência e dedicação que você vai voar longe!
+                        Conta com a gente nessa caminhada! 🚀💙
+                    </p>
+                </div>
+                <!-- END OF TESTIMONIAL -->
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-scrollbar">
+                <div class="swiper-scrollbar-drag"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= END OF TESTIMONIAL ======================= -->
+
+    <!-- ======================= START OF CONTACT ======================= -->
+
+    <section class="contact" id="contact">
+        <div class="overlay">
+            <div class="container">
+                <h1 class="contato">Contacte-me</h1>
+                <p class="entrar-contato">
+                    Olá, tudo bem? Meu nome é Arthur Estevan Vargas e estou à sua disposição. Primeiro, quero entender
+                    melhor o
+                    motivo do seu contato para que eu possa ajudar você!
+                </p>
+                <form action="https://formspree.io/f/xoqrgyea" method="POST">
+                    <input id="nome" type="text" name="Name" placeholder="Nome" required>
+                    <input id="email" type="email" name="Email" placeholder="Email" required>
+                    <input id="assunto" type="text" name="Subject" placeholder="Assunto" required>
+                    <textarea id="mensagem" name="Message" placeholder="Mensagem" required></textarea>
+                    <input type="submit" id="enviardados" value="Enviar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= END OF CONTACT ======================= -->
+
+    <!-- ======================= START OF FOOTER ======================= -->
+    <footer>
+        <div class="container">
+            <a href="#">
+                <h3 class="developer">Desenvolvedor</h3>
+            </a>
+            <ul>
+                <li><a class="inicio" href="#">Início</a></li>
+                <li><a class="sobre" href="#about">Sobre</a></li>
+                <li><a class="habilidades" href="#skills">Habilidade</a></li>
+                <li><a class="servicos" href="#services">Serviços</a></li>
+                <li><a class="portifolio" href="#portfolio">Portfólio</a></li>
+                <li><a class="contato" href="#contact">Contacte-me</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://www.instagram.com/arthur.estevan/" target="_blank"><i
+                        class="uil uil-instagram"></i></a>
+                <a href="https://github.com/ArthurEstevan" target="_blank"><i class="uil uil-github-alt"></i></a>
+                <a href="https://www.linkedin.com/in/arthur-estevan-vargas-189208223/" target="_blank"><i
+                        class="uil uil-linkedin-alt"></i></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            Copyright &copy; ArthurEstevan GitHub
+        </div>
+    </footer>
+    <!-- ======================= END OF FOOTER ======================= -->
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"> </script>
+
+    <!-- Jquery -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
+    <!-- Java main -->
+    <script src="./main.js"></script>
+
+
 </body>
-    
+
 </html>
